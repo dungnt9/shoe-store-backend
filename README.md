@@ -22,6 +22,11 @@ cd shoe-store-backend
 npm install
 ```
 
+- Note: Các dependences:
+```bash
+npm install @nestjs/typeorm typeorm pg class-validator class-transformer
+```
+
 2. Cấu hình cơ sở dữ liệu:
 
 - Tạo database PostgreSQL:
@@ -57,27 +62,6 @@ npm run start:prod
 ```
 
 Ứng dụng sẽ chạy tại: http://localhost:3001
-
-## Cấu trúc thư mục
-
-```
-shoe-store-backend/
-├── src/
-│   ├── app.module.ts         # Module chính của ứng dụng
-│   ├── main.ts               # Điểm khởi đầu của ứng dụng
-│   ├── shoes/                # Module quản lý giày
-│   │   ├── shoes.controller.ts   # Controller xử lý các request
-│   │   ├── shoes.service.ts      # Service xử lý logic
-│   │   ├── shoes.module.ts       # Module của entity giày
-│   │   ├── shoe.entity.ts        # Entity định nghĩa model giày
-│   │   └── dto/                  # Data Transfer Objects
-│   │       ├── create-shoe.dto.ts    # DTO cho tạo giày mới
-│   │       └── update-shoe.dto.ts    # DTO cho cập nhật giày
-├── test/                     # Thư mục chứa tests
-├── node_modules/             # Dependencies
-├── package.json              # Cấu hình và dependencies của dự án
-└── tsconfig.json             # Cấu hình TypeScript
-```
 
 ## Các API Endpoint
 
